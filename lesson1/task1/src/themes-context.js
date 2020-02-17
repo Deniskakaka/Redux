@@ -1,4 +1,5 @@
 import React from 'react';
+
 export const themes = {
     dark: {
         fontColor: '#000000',
@@ -7,8 +8,7 @@ export const themes = {
     light: {
         fontColor: '#ffffff',
         background: '#222222',
-    },
+    }
 };
-export const ThemeContext = React.createContext(
-    themes.dark,
-);
+
+export const themeContext = React.createContext(themes.dark);
