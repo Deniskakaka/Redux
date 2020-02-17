@@ -4,7 +4,7 @@ import { users } from './user.js';
 
 class App extends React.Component {
     state = {
-        user: {
+        userData: {
             name: 'Nikola Tesla',
             avatar_url: 'https://avatars3.githubusercontent.com/u10001'
         }
@@ -12,7 +12,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <users.Provider value={this.state.user}>
+            <users.Provider value={this.state.userData}>
                  <div className="page">
                     <Header/>
                 </div>
