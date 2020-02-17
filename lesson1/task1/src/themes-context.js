@@ -12,4 +12,4 @@ export const themes = {
 };
 
 
-export const themeContext = React.createContext(themes.light);
+export const themeContext = React.createContext(themes.dark);
