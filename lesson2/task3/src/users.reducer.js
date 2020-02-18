@@ -1,7 +1,3 @@
-import { createStore } from "redux";
-
-const ADD = 'USER/ADD';
-const DELET = 'USER/DELET';
 
 const usersArray = {
     usersList: []
@@ -9,12 +5,12 @@ const usersArray = {
 
 const userReducer = (state = usersArray , action) => {
     switch (action.type) {
-        case ADD:
+        case 'USER/ADD':
             return {
                 ...state,
                usersList: state.usersList.concat(action.user)
             };
-        case DELET:
+        case 'USER/DELET':
             return {
                 ...state,
                 usersList: state.usersList.filter(user => user.id !== action.id)
