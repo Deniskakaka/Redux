@@ -6,14 +6,14 @@ const webpack = require("webpack");
 module.exports = (env, argv) => {
     const isProduction = argv.mode === "production";
     const config = {
-        entry: "./src/index.jsx",
+        entry: "./src/index.js",
         output: {
             filename: "review_build/bundle.js"
         },
         module: {
             rules: [
                 {
-                    test: /.jsx?$/,
+                    test: /.js?$/,
                     use: ["babel-loader"]
                 },
                 {
@@ -36,8 +36,7 @@ module.exports = (env, argv) => {
             }),
         ],
         devServer: {
-            hot: true,
-            historyApiFallback:true
+            hot: true
         }
     };
 
