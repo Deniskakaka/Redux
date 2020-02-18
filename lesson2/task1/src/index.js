@@ -26,8 +26,5 @@ const counterReducer = (state = 0, action) => {
     }
 };
 
-store.dispatch(incrementActionCreator())
-store.dispatch(decrementActionCreator())
-
 
 const store = createStore(counterReducer);
