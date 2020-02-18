@@ -4,7 +4,7 @@ const ADD = 'USER/ADD';
 const DELET = 'USER/DELET';
 
 const usersArray = {
-    users: []
+    usersList: []
 };
 
 const userReducer = (state = usersArray , action) => {
@@ -12,12 +12,12 @@ const userReducer = (state = usersArray , action) => {
         case ADD:
             return {
                 ...state,
-               users: state.users.concat(action.user)
+               usersList: state.usersList.concat(action.user)
             };
         case DELET:
             return {
                 ...state,
-                users: state.users.filter(user => user.id !== action.id)
+                usersList: state.usersList.filter(user => user.id !== action.id)
             };
         default:
             return state;          
