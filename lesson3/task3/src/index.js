@@ -1,5 +1,5 @@
 import store from './store.js';
-import  addLanguage  from './language.actions.js';
+import { setLanguage }  from './language.actions.js';
 import { addProduct, deleteProduct } from './cart.actions.js';
 import { removeUser, setUser } from './user.actions.js';
 store.subscribe(() => console.log(store.getState()));
@@ -8,4 +8,4 @@ store.dispatch(addProduct({id: 76, name: 'milk'}));
 store.dispatch(deleteProduct(76));
 store.dispatch(setUser({name:'Bob'}));
 store.dispatch(removeUser());
-store.dispatch(addLanguage('ru'));
+store.dispatch(setLanguage('ru'));

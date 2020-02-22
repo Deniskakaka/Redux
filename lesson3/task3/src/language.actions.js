@@ -1,12 +1,10 @@
-export const ADD_LANGUAGE = 'LANGUAGE/ADD';
+export const SET_LANGUAGE = 'LANGUAGE/SET';
 
-const addLanguage = (lan) => {
+export const setLanguage = (lan) => {
     return {
-        type: ADD_LANGUAGE,
+        type: SET_LANGUAGE,
         payload: {
             lan
         }
     };
 };
-
-export default addLanguage;
