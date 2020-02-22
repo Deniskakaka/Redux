@@ -1,6 +1,6 @@
 export const ADD_LANGUAGE = 'LANGUAGE/ADD';
 
-export const addLanguage = (lan) => {
+const addLanguage = (lan) => {
     return {
         type: ADD_LANGUAGE,
         payload: {
@@ -9,3 +9,4 @@ export const addLanguage = (lan) => {
     };
 };
 
+export default addLanguage;
