@@ -9,11 +9,11 @@ const usersReducer = (state = initialState, action) => {
         case ADD_USER : {
             return {
                 ...state,
-                usersList: state.usersList.concat(action.payLoad.userData)
+                usersList: state.usersList.concat(action.payload.userData)
             }
         }
         case DELETE_USER : {
-            const newList = state.usersList.filter(user => user.id !== action.payLoad.userId);
+            const newList = state.usersList.filter(user => user.id !== action.payload.userId);
             return {
                 ...state,
                 usersList:newList
@@ -21,10 +21,10 @@ const usersReducer = (state = initialState, action) => {
         }
         case UPDATE_USER : {
             const newList = state.usersList.map(user => {
-                if (user.id === action.payLoad.userId) {
+                if (user.id === action.payload.userId) {
                    return {
                        ...user,
-                       ...action.payLoad.userData
+                       ...action.payload.userData
                    }
                 } 
             });
