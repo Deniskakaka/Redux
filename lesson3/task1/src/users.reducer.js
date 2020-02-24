@@ -4,7 +4,7 @@ const initialState = {
   usersList: []
 };
 
-export default function reduser(state = initialState, action) {
+export default function counterReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_USER:
       return {
