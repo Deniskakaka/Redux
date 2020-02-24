@@ -1,7 +1,7 @@
 import { ADD_USER, DELETE_USER, UPDATE_USER } from './users.actions.js';
 
 const initialState = {
-    userList : [],
+    usersList : [],
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -9,11 +9,11 @@ const usersReducer = (state = initialState, action) => {
         case ADD_USER : {
             return {
                 ...state,
-                userList: state.userList.concat(action.payLoad.userData)
+                userList: state.usersList.concat(action.payLoad.userData)
             }
         }
         case DELETE_USER : {
-            const newList = state.userList
+            const newList = state.usersList
             .filter(user => user.id !== action.payLoad.userId);
             return {
                 ...state,
@@ -21,7 +21,7 @@ const usersReducer = (state = initialState, action) => {
             }
         }
         case UPDATE_USER : {
-            const newList = state.userList.map(user => {
+            const newList = state.usersList.map(user => {
                 if (user.id === action.payLoad.userId) {
                    return {
                        ...user,
