@@ -1,9 +1,7 @@
 import { INCREMENT, DECREMENT } from './user.actions.js';
 
 const initialState = {
-	currentPage: 0,
-	itemsPerPage: 3,
-	users: [
+	usersList: [
 		{
 			id: 'id-0',
 			age: 21,
@@ -59,7 +57,8 @@ const initialState = {
 			age: 45,
 			name: 'Anna'
 		}
-	]
+	],
+	currentPage: 0
 };
 
 function pageReducer(state = initialState, action) {
