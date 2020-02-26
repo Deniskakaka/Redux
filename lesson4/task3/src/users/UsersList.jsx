@@ -6,7 +6,7 @@ import Pagination from './Pagination.jsx';
 
 class UserList extends React.Component {
     state = {
-        itemsPerPage : 10
+        itemsPerPage : 3
     }
     render() {
         let startIndex = this.props.currentPage * this.state.itemsPerPage;
