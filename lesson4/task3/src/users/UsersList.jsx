@@ -9,8 +9,8 @@ class UserList extends React.Component {
         itemsPerPage : 3
     }
     render() {
-        let startIndex = this.props.currentPage * 3;
-        let showUser = this.props.usersList.slice(startIndex, 3 + startIndex).map(user =>
+        let startIndex = this.props.currentPage * this.state.itemsPerPage;
+        let showUser = this.props.usersList.slice(startIndex, this.state.itemsPerPage + startIndex).map(user =>
             <User key={user.id} name={user.name} age={user.age} />
         )
         return (
@@ -18,7 +18,7 @@ class UserList extends React.Component {
                 <Pagination 
                     goNext={this.props.increment} 
                     goPrev={this.props.decrement} 
-                    isLastPage={this.props.usersList.length - 1}
+                    totalItems={this.props.usersList.length}
                     currentPage={this.props.currentPage} 
                     itemsPerPage={this.state.itemsPerPage}
                 />
