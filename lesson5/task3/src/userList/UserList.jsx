@@ -3,7 +3,7 @@ import Filter from './Filter.jsx';
 import User from './User.jsx';
 
 const UserList = ({ filterText, moveOption, usersList }) => {
-    const filterList = filterText === '' ? '' : usersList
+    const filterList =  usersList
         .filter(user => user.name.toLowerCase().includes(filterText.toLowerCase()) )
         .map(user=> <User key={user.id} name={user.name} age={user.age}/>);
     return (
