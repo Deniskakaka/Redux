@@ -3,18 +3,20 @@ import { connect } from 'react-redux';
 import * as weatherActions from './weather.actions.js';
 
 const Weather = ({ citys, getWeatherData }) => {
+    
     useEffect(() => {
         getWeatherData()
     });
+
     return (
         <main className="weather">
             <h1 className="weather__title">Weather data</h1>
             <ul className="cities-list">
-                {citys !== null ? citys.map(city => 
+                {citys.map(city => 
                 <li className="city">
                     <span className="city__name">{city.name}</span>
                     <span className="city__temperature">{city.temperature}</span>
-                </li>) : ''}
+                </li>)}
             </ul>
         </main>
     );

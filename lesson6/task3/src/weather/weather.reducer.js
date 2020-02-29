@@ -1,7 +1,7 @@
 import { WEATHER_DATA_RECEIVE } from './weather.actions.js';
 
 const initialState = {
-    listCitys : null
+    listCitys : []
 };
 
 const weatherReducer = (state = initialState, action) => {
