@@ -10,7 +10,6 @@ class SearchField extends React.Component {
   onChange = (event) => {
     this.setState({ userName: event.target.value });
   };
-
   handleUserSearch = () => {
     this.props.fetchUserData(this.state.userName);
   };
